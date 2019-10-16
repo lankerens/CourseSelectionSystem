@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lankeren.ssm.dao.StudentMapper">
+
+    <select id="getStuPasswordByUserId" resultType="string">
+        select Spassword from student where Sid = #{Sid};
+    </select>
+
+    <select id="getStuCourseAllselect" resultType="com.lankeren.ssm.beans.Course">
+        select Cid,Cname,Cintroduction,`Type`,Belongcoll,Belongpro from course
+    </select>
+
+    <select id="getCnameByCid" resultType="string">
+         select Cname from course where Cid=#{cid}
+    </select>
+
+    <select id="getStuBySid" resultType="com.lankeren.ssm.beans.Student">
+        select Sid,Sname,Sidcard,Ssex,Spassword,Sage,Classr,profession,College from student where Sid = #{sid};
+    </select>
+
+    <select id="updateStuPassword">
+        UPDATE student SET Spassword = #{newPassword} WHERE Sid = #{sid};
+    </select>
+
+
+
+</mapper>
