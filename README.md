@@ -17,6 +17,8 @@
  +  REST 风格
  
  +  分步查询、延迟加载
+ 
+ +  建了太多 session 存 map了，可以用 Model   Map  ModelMap
 
 
 <h4>编写日志:</h4>
